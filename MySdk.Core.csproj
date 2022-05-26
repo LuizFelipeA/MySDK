@@ -4,6 +4,12 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+    <PackageId>MySdkCore</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Luiz Felipe</Authors>
+    <PackageDescription>My SDK Example</PackageDescription>
+    <RepositoryUrl>https://github.com/LuizFelipeA/MySDK</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
