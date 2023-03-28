@@ -36,9 +36,9 @@ jobs:
         with:
           files: 'employee.json'
         env: 
-          username: tcranz
-          password: ${{ secrets.PASSWORD }}
-          url: https://github.com/${{github.repository}}
+          username: ${{ secrets.USERNAME_TEST }}
+          password: ${{ secrets.PASSWORD_TEST }}
+          url: $ {{ vars.URL_VARIABLE }}
           
           
       - name: Build and Pack
