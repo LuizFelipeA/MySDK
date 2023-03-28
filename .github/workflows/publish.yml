@@ -52,9 +52,8 @@ jobs:
         with:
           files: 'employee.json'
         env: 
-          person:
-          username: ${{ secrets.USERNAME_TEST }}
-          password: ${{ secrets.PASSWORD_TEST_2 }}
+          person:username: ${{ secrets.USERNAME_TEST }}
+          person:password: ${{ secrets.PASSWORD_TEST_2 }}
           url: ${{ vars.URL_VARIABLE }}
           
           
