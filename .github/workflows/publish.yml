@@ -34,7 +34,7 @@ jobs:
 
       - name: Get and Print branch name
         shell: bash
-        run: echo ${{ github.ref }} 
+        run: echo ${{ github.base_ref }} 
 
       - uses: microsoft/variable-substitution@v1
         with:
