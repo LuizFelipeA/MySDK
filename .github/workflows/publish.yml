@@ -37,8 +37,8 @@ jobs:
           files: 'employee.json'
         env: 
           username: ${{ secrets.USERNAME_TEST }}
-          password: ${{ secrets.PASSWORD_TEST }}
-          url: $ {{ vars.URL_VARIABLE }}
+          password: ${{ secrets.Development.PASSWORD_TEST }}
+          url: $ {{ env.URL_VARIABLE }}
           
           
       - name: Build and Pack
