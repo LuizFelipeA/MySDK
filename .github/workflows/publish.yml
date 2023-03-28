@@ -53,8 +53,8 @@ jobs:
           files: 'employee.json'
         env: 
           person:
-            username: ${{ secrets.USERNAME_TEST }}
-            password: ${{ secrets.PASSWORD_TEST_2 }}
+          username: ${{ secrets.USERNAME_TEST }}
+          password: ${{ secrets.PASSWORD_TEST_2 }}
           url: ${{ vars.URL_VARIABLE }}
           
           
