@@ -4,6 +4,11 @@ on:
   release:
     types: [ published ]
 
+# on:
+#   push:
+#     tags:
+#       - 'dev*'
+
 jobs:
   
   release:
@@ -32,17 +37,24 @@ jobs:
         with:
           dotnet-version: 6.0.x
 
-      - name: Get and Print branch name
-        shell: bash
-        run: echo ${{ github.ref_name_slug }} 
+      # - name: Create Release
+      #   id: create_release
+      #   uses: actions/create-release@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+      #   with:
+      #     tag_name: ${{ github.ref }}
+      #     release_name: Release ${{ github.ref }}
+      #     draft: false
+      #     prerelease: false
 
       - uses: microsoft/variable-substitution@v1
         with:
           files: 'employee.json'
-        if: ${{ github.ref }} == 'refs/tags/dev*'
         env: 
-          username: ${{ secrets.USERNAME_TEST }}
-          password: ${{ secrets.Development.PASSWORD_TEST }}
+          person:
+            username: ${{ secrets.USERNAME_TEST }}
+            password: ${{ secrets.PASSWORD_TEST_2 }}
           url: ${{ vars.URL_VARIABLE }}
           
           
