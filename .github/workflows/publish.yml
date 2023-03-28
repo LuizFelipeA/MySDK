@@ -3,8 +3,6 @@ name: Publish Release
 on:
   release:
     types: [ published ]
-    branches:
-      - develop
 
 jobs:
   
@@ -36,11 +34,12 @@ jobs:
 
       - name: Get and Print branch name
         shell: bash
-        run: echo ${{ github.base_ref }} 
+        run: echo ${{ github.ref_name }} 
 
       - uses: microsoft/variable-substitution@v1
         with:
           files: 'employee.json'
+        # if: ${{ github.ref }} == 'refs/tags/dev*'
         env: 
           username: ${{ secrets.USERNAME_TEST }}
           password: ${{ secrets.Development.PASSWORD_TEST }}
