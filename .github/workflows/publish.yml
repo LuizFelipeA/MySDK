@@ -2,8 +2,8 @@ name: Publish Release
 
 on:
   release:
-    types: [published]
-    branch: [ main ]
+    types: [ published ]
+    branches: [ main ]
 
 jobs:
   
